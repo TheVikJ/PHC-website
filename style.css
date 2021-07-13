@@ -1,0 +1,6 @@
+#grad {
+  font-family:Bahnschrift;
+  color: #FFFFFF;
+  background-image: linear-gradient(to bottom right,#ff883a, #ec3750);
+  height:100vh;
+}
