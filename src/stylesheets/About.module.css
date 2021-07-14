@@ -1,0 +1,21 @@
+﻿.container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    width: 30%;
+    display: block;
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 1.5rem;
+    margin: auto auto 1rem;
+}
+
+@media (min-width: 576px) {
+    .container {
+        top: 20%;
+    }
+}
