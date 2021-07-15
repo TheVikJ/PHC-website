@@ -1,8 +1,9 @@
-﻿import React from 'react';
+import React from 'react';
 import styles from '../stylesheets/Navbar.module.css';
 import {Link} from "react-router-dom";
+import {discordInvite} from '../data/Constants.json';
 
-function Navbar(props) {
+function Navbar() {
 	return (
 		<div className={styles.container}>
 			<ul className={styles.navbar}>
@@ -15,6 +16,11 @@ function Navbar(props) {
 					<Link to={'/about'}>
 						About
 					</Link>
+				</li>
+				<li className={styles.navbarItem}>
+					<a href={discordInvite} target={"_blank"} rel="noreferrer">
+						Discord
+					</a>
 				</li>
 			</ul>
 		</div>

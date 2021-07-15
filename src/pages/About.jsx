@@ -1,11 +1,14 @@
-﻿import React from 'react';
+import React from 'react';
 import styles from '../stylesheets/About.module.css';
 import ProgressiveImage from "react-progressive-image";
+import logo from '../images/common/psn.jpg';
+import tinyLogo from '../images/common/tiny/psn.jpg';
 
 function About(props) {
 	return (
 		<div className={`container ${styles.container}`}>
-			<ProgressiveImage src="https://cdn.discordapp.com/attachments/748589909987557506/849541509887950848/psn.png" placeholder="tiny-image.jpg">
+			{/*<img alt={"Logo"} src={".."} className={styles.logo}/>*/}
+			<ProgressiveImage src={logo} placeholder={tinyLogo}>
 				{src => <img alt={"Logo"} src={src} className={styles.logo}/>}
 			</ProgressiveImage>
 			<h1 className={"header text-center"}>
