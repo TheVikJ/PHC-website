@@ -7,7 +7,6 @@ import tinyLogo from '../images/common/tiny/psn.jpg';
 function About(props) {
 	return (
 		<div className={`container ${styles.container}`}>
-			{/*<img alt={"Logo"} src={".."} className={styles.logo}/>*/}
 			<ProgressiveImage src={logo} placeholder={tinyLogo}>
 				{src => <img alt={"Logo"} src={src} className={styles.logo}/>}
 			</ProgressiveImage>
