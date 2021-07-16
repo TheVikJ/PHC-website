@@ -14,21 +14,6 @@
     margin: auto auto .5rem;
 }
 
-.heading {
-    font-size: calc(26px + (40 - 26) * ((100vw - 300px) / (1600 - 300)));
-    margin: .9rem 0;
-}
-
-.subheading {
-    font-size: calc(22px + (32 - 22) * ((100vw - 300px) / (1600 - 300)));
-    margin: .8rem 0;
-}
-
-.text {
-    font-size: calc(19px + (22 - 19) * ((100vw - 300px) / (1600 - 300)));
-    margin: .7rem 0;
-}
-
 @media (min-width: 576px) {
     .container {
         top: 20%;

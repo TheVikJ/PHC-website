@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import About from "./pages/About";
 import './stylesheets/Common.scss';
-import ExternalRoutes from "./components/External/EnternalRoutes";
+import NotFound from "./pages/NotFound";
 
 function App() {
 	return (
@@ -11,7 +11,7 @@ function App() {
 			<Switch>
 				<Route exact path='/' component={Home}/>
 				<Route exact path='/about' component={About}/>
-				<ExternalRoutes/>
+				<Route component={NotFound}/>
 			</Switch>
 		</Layout>
 	);

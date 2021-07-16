@@ -1,25 +1,25 @@
 import React from 'react';
 import styles from '../stylesheets/Navbar.module.css';
 import {Link} from "react-router-dom";
-import ExternalNavs from "./External/ExternalNavs";
 
-function Navbar() {
+const Helper = (props) => {
 	return (
 		<div className={styles.container}>
 			<ul className={styles.navbar}>
-				<li>
-					<Link to={'/'}>
-						Home
-					</Link>
-				</li>
-				<li>
-					<Link to={'/about'}>
-						About
-					</Link>
-				</li>
-				<ExternalNavs/>
+				{
+					props.children.map((child, idx)=><li key={idx}>{child}</li>)
+				}
 			</ul>
 		</div>
+	)
+}
+
+function Navbar() {
+	return (
+		<Helper>
+			<Link to={'/'}>Home</Link>
+			<Link to={'/about'}>About</Link>
+		</Helper>
 	);
 }
 
