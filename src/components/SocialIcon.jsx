@@ -1,27 +1,24 @@
-import { SocialIcon } from "react-social-icons";
-import React from "react";
+import React, {useState} from "react";
+import {SocialIcon as ReactSocialIcon} from "react-social-icons";
 
-class SocialIconWrapper extends React.Component {
-  state = {
-    isHovered: false,
-  };
-  render() {
-    const { colors, url } = this.props.data;
-    return (
-      <SocialIcon
-        onMouseEnter={this.toggleHover}
-        onMouseLeave={this.toggleHover}
-        url={url}
-        fgColor={this.state.isHovered ? colors.hover.fg : colors.fg}
-        bgColor={this.state.isHovered ? colors.hover.bg : colors.bg}
-        target="_blank"
-      />
-    );
-  }
+function SocialIcon(props) {
+	const [hovering, setHovering] = useState(false);
+	const {colors, url} = props.data;
 
-  toggleHover = () => {
-    this.setState((prevState) => ({ isHovered: !prevState.isHovered }));
-  };
+	const toggleHover = () => {
+		setHovering((prevState) => (!prevState));
+	};
+
+	return (
+		<ReactSocialIcon
+			onMouseEnter={toggleHover}
+			onMouseLeave={toggleHover}
+			url={url}
+			fgColor={hovering ? colors.hover.fg : colors.fg}
+			bgColor={hovering ? colors.hover.bg : colors.bg}
+			target="_blank"
+		/>
+	)
 }
 
-export default SocialIconWrapper;
+export default SocialIcon;

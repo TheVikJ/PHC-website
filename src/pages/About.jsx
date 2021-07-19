@@ -20,9 +20,9 @@ function About(props) {
         developers and tech enthusiasts supporting each other on our own
         journeys deeper into our respective fields.
       </p>
-      <ul className="icons">
+      <ul className={styles.iconList}>
         {icons.map((icon) => (
-          <li className="icon">
+          <li className={styles.icon} key={icon.url}>
             <SocialIconWrapper data={icon} />
           </li>
         ))}
