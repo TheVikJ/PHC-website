@@ -9,7 +9,6 @@ import ProgressiveImage from "react-progressive-image";
 function NotFound(props) {
   return (
     <div className={styles.container}>
-      <h1 className={"header text-center"}>404</h1>
       <ProgressiveImage src={panther} placeholder={tinyPanther}>
         {(src) => (
           <img
@@ -19,6 +18,7 @@ function NotFound(props) {
           />
         )}
       </ProgressiveImage>
+      <h1 className={"header text-center"}>404</h1>
       <p className={"text-content text-center"}>
         The page you requested does not exist
         <br />

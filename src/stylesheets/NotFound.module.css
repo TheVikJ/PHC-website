@@ -1,19 +1,38 @@
 .panther {
   display: block;
-  border-radius: 1.5rem;
-  margin: auto auto auto;
-  margin-top: 1%;
-  margin-bottom: 2%;
+  margin-bottom: 2vh;
+  width: 40vw;
+  max-width: 250px;
 }
 
 .container {
-  position: absolute;
-  top: 20%;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 576px) {
   .container {
     top: 20%;
   }
+
+  .panther {
+    width: 30vw;
+  }
 }
+
+@media (min-width: 768px) {
+  .panther {
+    width: 20vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .panther {
+    width: 10vw;
+  }
+}
+
