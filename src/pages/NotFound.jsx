@@ -3,12 +3,16 @@ import styles from "../stylesheets/NotFound.module.css";
 import { Link } from "react-router-dom";
 import panther from "../images/common/sad_panther.png";
 import tinyPanther from "../images/common/tiny/sad_panther.png";
+import Helmet from "react-helmet";
 
 import ProgressiveImage from "react-progressive-image";
 
 function NotFound(props) {
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>Not Found - PSN Hack Club</title>
+      </Helmet>
       <ProgressiveImage src={panther} placeholder={tinyPanther}>
         {(src) => (
           <img

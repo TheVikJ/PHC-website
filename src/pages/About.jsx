@@ -5,10 +5,14 @@ import logo from "../images/common/psn.jpg";
 import tinyLogo from "../images/common/tiny/psn.jpg";
 import SocialIconWrapper from "../components/SocialIcon";
 import { icons } from "../data/SocialIcons.json";
+import { Helmet } from "react-helmet";
 
 function About(props) {
   return (
     <div className={`container ${styles.container}`}>
+      <Helmet>
+        <title>About - PSN Hack Club</title>
+      </Helmet>
       <ProgressiveImage src={logo} placeholder={tinyLogo}>
         {(src) => <img alt={"Logo"} src={src} className={styles.logo} />}
       </ProgressiveImage>
