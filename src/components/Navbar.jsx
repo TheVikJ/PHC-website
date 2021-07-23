@@ -19,6 +19,7 @@ function Navbar() {
 		<Helper>
 			<Link to={'/'}>Home</Link>
 			<Link to={'/about'}>About</Link>
+			<Link to={'/alumni'}>Alumni</Link>
 		</Helper>
 	);
 }

@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import About from "./pages/About";
 import './stylesheets/Common.scss';
 import NotFound from "./pages/NotFound";
+import Alumni from "./pages/Alumni";
 
 function App() {
 	return (
@@ -11,6 +12,7 @@ function App() {
 			<Switch>
 				<Route exact path='/' component={Home}/>
 				<Route exact path='/about' component={About}/>
+				<Route exact path='/alumni' component={Alumni}/>
 				<Route component={NotFound}/>
 			</Switch>
 		</Layout>

@@ -1,9 +1,5 @@
 ﻿.container {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
+    padding-top: 10rem;
 }
 
 .logo {
