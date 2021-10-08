@@ -5,11 +5,11 @@ import {Link} from "react-router-dom";
 const Helper = (props) => {
 	return (
 		<div className={styles.container}>
-			<div className={styles.navbar}>
+			<ul className={styles.navbar}>
 				{
-					props.children.map((child, idx)=><span key={idx}>{child}</span>)
+					props.children.map((child, idx)=><li key={idx}>{child}</li>)
 				}
-			</div>
+			</ul>
 		</div>
 	)
 }
