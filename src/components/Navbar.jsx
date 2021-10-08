@@ -1,15 +1,15 @@
 import React from 'react';
-import styles from '../stylesheets/Navbar.module.css';
+import styles from '../stylesheets/Navbar.module.scss';
 import {Link} from "react-router-dom";
 
 const Helper = (props) => {
 	return (
 		<div className={styles.container}>
-			<ul className={styles.navbar}>
+			<div className={styles.navbar}>
 				{
-					props.children.map((child, idx)=><li key={idx}>{child}</li>)
+					props.children.map((child, idx)=><span key={idx}>{child}</span>)
 				}
-			</ul>
+			</div>
 		</div>
 	)
 }
@@ -17,7 +17,7 @@ const Helper = (props) => {
 function Navbar() {
 	return (
 		<Helper>
-			<Link to={'/'}>Home</Link>
+			<Link to={'/'}><b>PSN Hack Club</b></Link>
 			<Link to={'/about'}>About</Link>
 			<Link to={'/alumni'}>Alumni</Link>
 		</Helper>

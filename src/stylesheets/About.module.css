@@ -1,5 +1,6 @@
 ﻿.container {
-    padding-top: 10rem;
+    margin-top: 4rem;
+    height: max-content;
 }
 
 .logo {
@@ -27,10 +28,6 @@
 }
 
 @media (min-width: 576px) {
-    .container {
-        top: 20%;
-    }
-
     .logo {
         width: 25%;
         border-radius: 2rem;
@@ -38,12 +35,20 @@
 }
 
 @media (min-width: 768px) {
+    .container {
+        margin-top: 6rem;
+    }
+
     .logo {
         border-radius: 2.5rem;
     }
 }
 
 @media (min-width: 992px) {
+    .container {
+        margin-top: 10rem;
+    }
+
     .logo {
         border-radius: 3rem;
     }
