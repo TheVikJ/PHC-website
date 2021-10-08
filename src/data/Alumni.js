@@ -26,6 +26,3 @@ export const alumni = [
     ],
   },
 ]
-
-export const getImagePath = (name) =>
-  `${name.toLowerCase().replaceAll(' ', '_')}.jpg`
