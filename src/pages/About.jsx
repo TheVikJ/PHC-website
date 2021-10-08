@@ -4,11 +4,18 @@ import ProgressiveImage from "react-progressive-image";
 import logo from "../images/common/psn.jpg";
 import tinyLogo from "../images/common/tiny/psn.jpg";
 import SocialIconWrapper from "../components/SocialIcon";
-import { icons } from "../data/SocialIcons.json";
+import { icons } from "../data/SocialData";
+import MetaDecorator from "../components/MetaDecorator";
 
 function About(props) {
   return (
     <div className={`container ${styles.container}`}>
+      
+      <MetaDecorator
+        title={"PSN Hack Club | About"}
+        description={"PSN Hack Club is a club under the global Hack Club network at Pathways School Noida. Open the website to learn more"}
+      />
+      
       <ProgressiveImage src={logo} placeholder={tinyLogo}>
         {(src) => <img alt={"Logo"} src={src} className={styles.logo} />}
       </ProgressiveImage>

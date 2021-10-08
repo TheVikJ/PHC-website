@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  margin: 4rem auto 0;
+}
+
+.yearContainer {
+  width: 85%;
+  margin-bottom: 2rem;
+}
+
+.alumniContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.yearHeader {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 0 1.5rem;
+}
+
+.alumni {
+  height: min(25rem, min-content);
+  display: flex;
+  flex-direction: column;
+}
+
+.alumni p {
+  margin: 0.2rem;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: .5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.image img {
+  width: 100%;
+}
+
+.name {
+  font-size: 1.1rem;
+}
+
+.role {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    margin-top: 6rem;
+  }
+
+  .yearHeader {
+    text-align: start;
+  }
+
+  .alumniContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .yearContainer {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .alumniContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .yearContainer {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .alumniContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

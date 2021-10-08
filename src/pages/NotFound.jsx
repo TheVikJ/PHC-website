@@ -5,10 +5,15 @@ import panther from "../images/common/sad_panther.png";
 import tinyPanther from "../images/common/tiny/sad_panther.png";
 
 import ProgressiveImage from "react-progressive-image";
+import MetaDecorator from "../components/MetaDecorator";
 
 function NotFound(props) {
   return (
     <div className={styles.container}>
+      <MetaDecorator
+        title={"PSN Hack Club | Not Found"}
+        description={"The page you requested was not found."}
+      />
       <ProgressiveImage src={panther} placeholder={tinyPanther}>
         {(src) => (
           <img
