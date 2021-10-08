@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../stylesheets/Home.module.css'
-import {lines} from '../data/Home.json';
+import {lines} from '../data/Home.js';
 import Typist from 'react-typist';
 import MetaDecorator from "../components/MetaDecorator";
 

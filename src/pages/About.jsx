@@ -4,7 +4,7 @@ import ProgressiveImage from "react-progressive-image";
 import logo from "../images/common/psn.jpg";
 import tinyLogo from "../images/common/tiny/psn.jpg";
 import SocialIconWrapper from "../components/SocialIcon";
-import { icons } from "../data/SocialIcons.json";
+import { icons } from "../data/SocialData";
 import MetaDecorator from "../components/MetaDecorator";
 
 function About(props) {
