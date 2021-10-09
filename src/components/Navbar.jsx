@@ -9,8 +9,8 @@ const Wrapper = (props) => {
 
 function Navbar() {
   const routes = navbarRoutes.map(route =>
-    <Wrapper>
-      <Link key={route.route} to={route.route}>{route.name}</Link>
+    <Wrapper key={route.route}>
+      <Link to={route.route}>{route.name}</Link>
     </Wrapper>
   )
 	return (
