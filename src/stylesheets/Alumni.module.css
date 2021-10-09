@@ -27,10 +27,15 @@
   height: min(25rem, min-content);
   display: flex;
   flex-direction: column;
+  transition:200ms
 }
 
 .alumni p {
   margin: 0.2rem;
+}
+
+.alumni:hover {
+  transform: scale(1.07);
 }
 
 .image {
