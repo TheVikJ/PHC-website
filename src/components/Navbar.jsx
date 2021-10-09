@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {navbarRoutes} from "../data/Routes";
 
 const Wrapper = (props) => {
-  return <span>{props.children}</span>
+  return <li>{props.children}</li>
 }
 
 function Navbar() {
@@ -15,7 +15,7 @@ function Navbar() {
   )
 	return (
     <div className={styles.container}>
-      <div className={styles.navbar}>
+      <ul className={styles.navbar}>
         <React.Fragment>
           {routes}
         </React.Fragment>

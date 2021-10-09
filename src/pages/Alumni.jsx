@@ -25,8 +25,7 @@ const Alumni = () => (
             let image
             try {
               image = require(`../images/alumni/${imagePath}`).default
-            } catch (e) {
-              console.log(e)
+            } catch {
               image =
                 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/434px-Unknown_person.jpg'
             }
@@ -35,8 +34,6 @@ const Alumni = () => (
               tinyImage = require(`../images/alumni/tiny/${imagePath}`).default
             } catch {
             }
-
-            console.log(`${member.name}:\nnormal: ${image}\ntiny: ${tinyImage}`)
 
             return (
               <Card className={styles.alumni} key={member.name}>
