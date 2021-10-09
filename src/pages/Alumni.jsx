@@ -20,31 +20,26 @@ const Alumni = () => (
         <p className={styles.yearHeader}>{year.year}</p>
         <div className={styles.alumniContainer}>
           {year.members.map((member) => {
-            const imagePath = `${member.name.toLowerCase().replaceAll(' ', '_')}.jpg`;
-            let tinyImage
-            let image
+            const imageFile = `${member.name.toLowerCase().replaceAll(' ', '_')}.jpg`;
+            let image, tinyImage
             try {
-              image = require(`../images/alumni/${imagePath}`).default
-            } catch {
-              image =
-                'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/434px-Unknown_person.jpg'
+              image = require(`../images/alumni/${imageFile}`).default
+            } catch (e) {
+              image = require("../images/common/unknown_person.jpg").default
             }
 
             try {
-              tinyImage = require(`../images/alumni/tiny/${imagePath}`).default
+              tinyImage = require(`../images/alumni/tiny/${imageFile}`).default
             } catch {
+              tinyImage = require(`../images/common/tiny/unknown_person.jpg`).default
             }
 
             return (
-              <Card className={styles.alumni} key={member.name}>
+              <Card onClick={()=> {if(member.link) window.open(member.link, '_blank')} } className={styles.alumni} key={member.name}>
                 <div className={styles.image}>
-                  {tinyImage ? (
                     <ProgressiveImage src={image} placeholder={tinyImage}>
                       {(src) => <img alt={member.name} src={src} />}
                     </ProgressiveImage>
-                  ) : (
-                    <img alt={member.name} src={image} />
-                  )}
                 </div>
                 <p className={styles.name}>{member.name}</p>
                 <p className={styles.role}>{member.role}</p>

@@ -4,11 +4,12 @@ import styles from '../../stylesheets/Card.module.css';
 
 function Card(props) {
 	return (
-		<div className={`${styles.card} ${props.className !== undefined && props.className}`}>
+		<div onClick={()=> {if (typeof props.onClick === 'function') props.onClick()}} className={`${styles.card} ${props.className !== undefined && props.className}`}>
 			{props.children}
 		</div>
 	);
 }
+
 
 Card.propTypes = {
 	className: PropTypes.string
