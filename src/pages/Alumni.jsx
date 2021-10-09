@@ -34,7 +34,6 @@ const Alumni = () => (
               tinyImage = require(`../images/common/tiny/unknown_person.jpg`).default
             }
 
-
             return (
               <Card onClick={()=> {if(member.link) window.open(member.link, '_blank')} } className={styles.alumni} key={member.name}>
                 <div className={styles.image}>
