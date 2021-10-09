@@ -11,7 +11,7 @@ const Alumni = () => (
     <MetaDecorator
       title={'PSN Hack Club | Alumni'}
       description={
-        'PSN Hack Club was founded in 2019. View all it\'s alumni here!'
+        "PSN Hack Club was founded in 2019. View all it's alumni here!"
       }
     />
 
@@ -30,16 +30,19 @@ const Alumni = () => (
 
             try {
               tinyImage = require(`../images/alumni/tiny/${imageFile}`).default
-            } catch {
-              tinyImage = require(`../images/common/tiny/unknown_person.jpg`).default
-            }
+            } catch {}
 
             return (
               <Card onClick={()=> {if(member.link) window.open(member.link, '_blank')} } className={styles.alumni} key={member.name}>
                 <div className={styles.image}>
-                    <ProgressiveImage src={image} placeholder={tinyImage}>
-                      {(src) => <img alt={member.name} src={src} />}
-                    </ProgressiveImage>
+                  {
+                    tinyImage ?
+                      <ProgressiveImage src={image} placeholder={tinyImage}>
+                        {(src) => <img alt={member.name} src={src} />}
+                      </ProgressiveImage>
+                      :
+                      <img alt={member.name} src={image} />
+                  }
                 </div>
                 <p className={styles.name}>{member.name}</p>
                 <p className={styles.role}>{member.role}</p>

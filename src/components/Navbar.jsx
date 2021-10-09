@@ -19,7 +19,7 @@ function Navbar() {
         <React.Fragment>
           {routes}
         </React.Fragment>
-      </div>
+      </ul>
     </div>
 	);
 }
