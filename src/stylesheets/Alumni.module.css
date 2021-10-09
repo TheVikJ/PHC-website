@@ -27,7 +27,7 @@
   height: min(25rem, min-content);
   display: flex;
   flex-direction: column;
-  transition:200ms
+  transition: transform 200ms;
 }
 
 .alumni p {
@@ -35,7 +35,8 @@
 }
 
 .alumni:hover {
-  transform: scale(1.07);
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 .image {
@@ -47,7 +48,10 @@
 }
 
 .image img {
+  height: 100%;
   width: 100%;
+  object-fit: cover;
+  object-position: 0 0;
 }
 
 .name {
