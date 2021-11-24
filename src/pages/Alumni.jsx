@@ -7,39 +7,46 @@ import { alumni } from '../data/Alumni'
 import ProgressiveImage from 'react-progressive-image'
 
 const Alumni = () => (
-  <div className={styles.container}>
+  <div className={'container-sm'}>
     <MetaDecorator
       title={'PSN Hack Club | Alumni'}
       description={
-        'PSN Hack Club was founded in 2019. View all it\'s alumni here!'
+        "PSN Hack Club was founded in 2019. View all it's alumni here!"
       }
     />
+
+    <p className={styles.pageHeader}>Alumni</p>
+    <p className={styles.description}>
+      The PSN Hack Club has a growing list of experienced alumni that aim to grow the club and mentor new members
+    </p>
 
     {alumni.map((year) => (
       <div className={styles.yearContainer} key={year.year}>
         <p className={styles.yearHeader}>{year.year}</p>
         <div className={styles.alumniContainer}>
           {year.members.map((member) => {
-            const imagePath = `${member.name.toLowerCase().replaceAll(' ', '_')}.jpg`;
-            let tinyImage
-            let image
+            const imageFile = `${member.name
+              .toLowerCase()
+              .replaceAll(' ', '_')}.jpg`
+            let image, tinyImage
             try {
-              image = require(`../images/alumni/${imagePath}`).default
+              image = require(`../images/alumni/${imageFile}`).default
             } catch (e) {
-              console.log(e)
-              image =
-                'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/434px-Unknown_person.jpg'
+              image = require('../images/common/unknown_person.jpg').default
             }
 
             try {
-              tinyImage = require(`../images/alumni/tiny/${imagePath}`).default
-            } catch {
-            }
-
-            console.log(`${member.name}:\nnormal: ${image}\ntiny: ${tinyImage}`)
+              tinyImage = require(`../images/alumni/tiny/${imageFile}`).default
+            } catch {}
 
             return (
-              <Card className={styles.alumni} key={member.name}>
+              <Card
+                onClick={() => {
+                  if (member.link) window.open(member.link, '_blank')
+                }}
+                className={styles.alumni}
+                key={member.name}
+              >
                 <div className={styles.image}>
                   {tinyImage ? (
                     <ProgressiveImage src={image} placeholder={tinyImage}>
