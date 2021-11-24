@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../stylesheets/Navbar.module.scss';
-import {Link} from "react-router-dom";
+import {NavLink } from "react-router-dom";
 import {navbarRoutes} from "../data/Routes";
 
 const Wrapper = (props) => {
@@ -10,7 +10,7 @@ const Wrapper = (props) => {
 function Navbar() {
   const routes = navbarRoutes.map(route =>
     <Wrapper key={route.route}>
-      <Link to={route.route}>{route.name}</Link>
+      <NavLink activeClassName={styles.selected} to={route.route}>{route.name}</NavLink>
     </Wrapper>
   )
 	return (
