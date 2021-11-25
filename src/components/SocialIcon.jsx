@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {SocialIcon as ReactSocialIcon} from "react-social-icons";
+import React, { useState } from 'react'
+import { SocialIcon as ReactSocialIcon } from 'react-social-icons'
 
 function SocialIcon({ data }) {
   const [hovering, setHovering] = useState(false)
@@ -15,9 +15,9 @@ function SocialIcon({ data }) {
       url={data.url}
       fgColor={hovering ? data.colors.hover.fg : data.colors.fg}
       bgColor={hovering ? data.colors.hover.bg : data.colors.bg}
-      target="_blank"
+      target={'_blank'}
     />
   )
 }
 
-export default SocialIcon;
+export default SocialIcon

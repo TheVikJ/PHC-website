@@ -1,25 +1,25 @@
-import {Fragment} from "react";
-import {Route, Switch} from 'react-router-dom';
-import Layout from "./components/Layout";
-import './stylesheets/Common.scss';
-import NotFound from "./pages/NotFound";
-import {homeRoutes} from "./data/Routes";
+import { Route, Switch, Redirect } from 'react-router-dom'
+import Layout from './components/Layout'
+import NotFound from './pages/NotFound'
+import { homeRoutes } from './data/Routes'
 
 function App() {
-	return (
-		<Layout>
-			<Switch>
-        <Fragment>
-          {
-            homeRoutes.map(route =>
-              <Route exact key={route.route} path={route.route} component={route.component}/>
-            )
-          }
-        </Fragment>
-				<Route component={NotFound}/>
-			</Switch>
-		</Layout>
-	);
+  return (
+    <Layout>
+      <Switch>
+        {homeRoutes.map((route) => (
+          <Route
+            exact
+            key={route.route}
+            path={route.route}
+            component={route.component}
+          />
+        ))}
+        <Route exact path={'/404'} component={NotFound} />
+        <Redirect to={'/404'} />
+      </Switch>
+    </Layout>
+  )
 }
 
-export default App;
+export default App

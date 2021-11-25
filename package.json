@@ -19,6 +19,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-social-icons": "^5.5.1",
+    "react-spring": "^9.3.2",
     "react-typist": "^2.0.5"
   },
   "scripts": {
