@@ -1,12 +1,12 @@
-.yearContainer {
-  width: 95%;
-  margin-bottom: 2rem;
+.pageContainer {
+  margin-top: 3rem;
 }
 
 .alumniContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
+  margin-bottom: 2rem;
 }
 
 .yearHeader {
@@ -56,6 +56,7 @@
 .role {
   color: rgba(0, 0, 0, 0.55);
   font-size: 0.9rem;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 
@@ -77,10 +78,6 @@
 
   .alumniContainer {
     justify-items: start;
-  }
-
-  .yearContainer {
-    width: 95%;
   }
 
   .description {
