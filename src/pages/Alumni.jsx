@@ -1,13 +1,13 @@
 import React from 'react'
 import Card from '../components/UI/Card'
-import styles from '../stylesheets/Alumni.module.css'
+import styles from './Alumni.module.css'
 import MetaDecorator from '../components/MetaDecorator'
 import { alumni } from '../data/Alumni'
 
 import ProgressiveImage from 'react-progressive-image'
 
 const Alumni = () => (
-  <div className={'container-sm'}>
+  <div className={`container-sm ${styles.pageContainer}`}>
     <MetaDecorator
       title={'PSN Hack Club | Alumni'}
       description={
@@ -15,19 +15,20 @@ const Alumni = () => (
       }
     />
 
-    <p className={styles.pageHeader}>Alumni</p>
+    <p className={'subheader'}>Alumni</p>
     <p className={styles.description}>
-      The PSN Hack Club has a growing list of experienced alumni that aim to grow the club and mentor new members
+      The PSN Hack Club has a growing list of experienced alumni that aim to
+      grow the club and mentor new members
     </p>
 
     {alumni.map((year) => (
-      <div className={styles.yearContainer} key={year.year}>
+      <React.Fragment key={year.year}>
         <p className={styles.yearHeader}>{year.year}</p>
         <div className={styles.alumniContainer}>
           {year.members.map((member) => {
             const imageFile = `${member.name
               .toLowerCase()
-              .replaceAll(' ', '_')}.jpg`
+              .replace(/ /g, '_')}.jpg`
             let image, tinyImage
             try {
               image = require(`../images/alumni/${imageFile}`).default
@@ -62,7 +63,7 @@ const Alumni = () => (
             )
           })}
         </div>
-      </div>
+      </React.Fragment>
     ))}
   </div>
 )
