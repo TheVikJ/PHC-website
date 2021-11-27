@@ -5,7 +5,7 @@ import { useSpring, animated, config } from 'react-spring'
 const Timer = ({ style }) => {
   const calculateTimeLeft = () => {
     const difference =
-      new Date(Date.UTC(2022, 1, 7, 10, 0, 0)) -
+      new Date(Date.UTC(2022, 1, 7, 11, 0, 0)) -
       new Date(Math.floor(new Date().getTime()))
 
     const timeLeft = {
