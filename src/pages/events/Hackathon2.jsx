@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import styles from './Hackathon2022.module.scss'
+import styles from './Hackathon2.module.scss'
 import { useSpring, animated, config } from 'react-spring'
+import MetaDecorator from '../../components/MetaDecorator'
 
 const Timer = ({ style }) => {
   const calculateTimeLeft = () => {
@@ -53,22 +54,27 @@ const Hero = () => {
   return (
     <div className={styles.heroContainer}>
       <animated.p style={style} className={styles.hero}>
-        PSN Hackathon 2022
+        PSN Hackathon 2.0
       </animated.p>
       <Timer style={style} />
-      {/*<animated.p style={style} className={styles.subText}>*/}
-      {/*  7 - 9 January*/}
-      {/*</animated.p>*/}
     </div>
   )
 }
 
-const Hackathon2022 = () => {
+const Hackathon2 = () => {
   return (
-    <div className={styles.pageContainer}>
-      <Hero />
-    </div>
+    <React.Fragment>
+      <MetaDecorator
+        description={
+          "PSN Hackathon 2.0 is the PSN Hack Club's 2nd ever hackathon. Pre-registrations open soon"
+        }
+        title={'Hackathon 2.0'}
+      />
+      <div className={styles.pageContainer}>
+        <Hero />
+      </div>
+    </React.Fragment>
   )
 }
 
-export default Hackathon2022
+export default Hackathon2
