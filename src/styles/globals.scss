@@ -14,7 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
+#__next {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -22,7 +22,7 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
 
 ::-webkit-scrollbar {

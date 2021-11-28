@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styles from './Hackathon2.module.scss'
+import styles from '../../styles/Hackathon2.module.scss'
 import { useSpring, animated, config } from 'react-spring'
 import MetaDecorator from '../../components/MetaDecorator'
 

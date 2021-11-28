@@ -1,13 +1,11 @@
 import React from 'react'
-import styles from './About.module.css'
-import ProgressiveImage from 'react-progressive-image'
-import logo from '../images/common/psn.jpg'
-import tinyLogo from '../images/common/tiny/psn.jpg'
+import styles from '../styles/About.module.scss'
+import Image from 'next/image'
 import SocialIconWrapper from '../components/SocialIcon'
 import { icons } from '../data/SocialData'
 import MetaDecorator from '../components/MetaDecorator'
 
-function About(props) {
+function About() {
   return (
     <div className={`container ${styles.container}`}>
       <MetaDecorator
@@ -17,9 +15,8 @@ function About(props) {
         }
       />
 
-      <ProgressiveImage src={logo} placeholder={tinyLogo}>
-        {(src) => <img alt={'Logo'} src={src} className={styles.logo} />}
-      </ProgressiveImage>
+      <img alt={'Logo'} src={'/images/common/psn.jpg'} className={styles.logo}/>
+
       <h1 className={'header text-center'}>About us</h1>
       <p className={'text-heading'}>Who are we?</p>
       <p className={'text-content'}>

@@ -1,10 +1,29 @@
 import React from 'react'
 import styles from './Navbar.module.scss'
-import { NavLink } from 'react-router-dom'
+import {useRouter} from 'next/router';
+import Link from 'next/link';
 import { navbarRoutes } from '../data/Routes'
 
 const Wrapper = (props) => {
   return <li>{props.children}</li>
+}
+
+function NavLink({to, exact, children, activeClassName, ...props}) {
+  const {pathname} = useRouter();
+  const isActive = exact ? pathname === to : pathname.startsWith(to);
+
+
+  if (isActive) {
+    props.className += ` ${activeClassName}`;
+  }
+
+  return (
+    <Link href={to}>
+      <a {...props}>
+        {children}
+      </a>
+    </Link>
+  );
 }
 
 function Navbar() {
@@ -15,6 +34,7 @@ function Navbar() {
       </NavLink>
     </Wrapper>
   ))
+
   return (
     <div className={styles.container}>
       <ul className={styles.navbar}>
