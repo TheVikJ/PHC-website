@@ -11,7 +11,7 @@ function About(props) {
   return (
     <div className={`container ${styles.container}`}>
       <MetaDecorator
-        title={'PSN Hack Club | About'}
+        title={'About'}
         description={
           'PSN Hack Club is a club under the global Hack Club network at Pathways School Noida. Open the website to learn more'
         }

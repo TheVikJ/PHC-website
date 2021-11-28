@@ -9,7 +9,7 @@ import ProgressiveImage from 'react-progressive-image'
 const Alumni = () => (
   <div className={`container-sm ${styles.pageContainer}`}>
     <MetaDecorator
-      title={'PSN Hack Club | Alumni'}
+      title={'Alumni'}
       description={
         "PSN Hack Club was founded in 2019. View all it's alumni here!"
       }

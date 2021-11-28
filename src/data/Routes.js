@@ -2,7 +2,7 @@ import About from '../pages/About'
 import Alumni from '../pages/Alumni'
 import Home from '../pages/Home'
 import React from 'react'
-import Hackathon2022 from '../pages/events/Hackathon2022'
+import Hackathon2 from '../pages/events/Hackathon2'
 
 const commonRoutes = [
   {
@@ -32,7 +32,7 @@ export const homeRoutes = [
     component: Home,
   },
   {
-    route: '/events/hackathon2022',
-    component: Hackathon2022,
+    route: '/events/hackathon2.0',
+    component: Hackathon2,
   },
 ]

@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className={styles.main}>
       <MetaDecorator
-        title={'PSN Hack Club | Home'}
+        title={'Home'}
         description={
           'PSN Hack Club is a club under the global Hack Club network at Pathways School Noida. Open the website to learn more'
         }
