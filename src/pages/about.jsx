@@ -21,7 +21,7 @@ function About() {
       <p className={'text-heading'}>Who are we?</p>
       <p className={'text-content'}>
         PSN Hack Club is a club under the global Hack Club network at Pathways
-        School Noida. We're a welcoming community of over 50 programmers,
+        School Noida. We&apos;re a welcoming community of over 50 programmers,
         developers and tech enthusiasts supporting each other on our own
         journeys deeper into our respective fields.
       </p>
