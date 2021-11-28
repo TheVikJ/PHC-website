@@ -1,0 +1,60 @@
+﻿.container {
+  margin-top: 4rem;
+  height: max-content;
+}
+
+.logo {
+  aspect-ratio: 1;
+  width: 50%;
+  min-width: 50%;
+  display: block;
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 1.5rem;
+  margin: auto auto .5rem;
+}
+
+.iconList {
+  padding: 0;
+  margin-top: 3rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.icon {
+  border: 2px #fff solid;
+  border-radius: 10000rem; /* Irrationally high value to have it as a circle indefinitely */
+}
+
+@media (min-width: 576px) {
+  .logo {
+    width: 35%;
+    min-width: 35%;
+    border-radius: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin-top: 6rem;
+  }
+
+  .logo {
+    width: 30%;
+    min-width: 30%;
+    border-radius: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    margin-top: 10rem;
+  }
+
+  .logo {
+    border-radius: 3rem;
+  }
+}

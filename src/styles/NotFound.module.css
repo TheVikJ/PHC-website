@@ -25,13 +25,14 @@
 
 @media (min-width: 768px) {
   .panther {
-    width: 20vw;
+    width: 25vw;
   }
 }
 
 @media (min-width: 992px) {
   .panther {
-    width: 10vw;
+    width: 20vw;
+    max-width: 250px;
   }
 }
 
