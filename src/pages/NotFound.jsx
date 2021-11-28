@@ -10,7 +10,7 @@ function NotFound(props) {
   return (
     <div className={styles.container}>
       <MetaDecorator
-        title={'PSN Hack Club | Not Found'}
+        title={'Not Found'}
         description={'The page you requested was not found.'}
       />
       <ProgressiveImage src={panther} placeholder={tinyPanther}>

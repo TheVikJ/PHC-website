@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 function MetaDecorator({ title, description }) {
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>{`PSN Hack Club | ${title}`}</title>
       <meta name="description" content={description} />
     </Helmet>
   )
