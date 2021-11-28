@@ -1,19 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
+import React from "react";
+import PropTypes from "prop-types";
+import Head from "next/head";
 
-function MetaDecorator({ title, description }) {
+const MetaDecorator = ({ title, description }) => {
+  const finalTitle = `PSN Hack Club | ${title}`;
+
   return (
-    <Helmet>
-      <title>{`PSN Hack Club | ${title}`}</title>
+    <Head>
+      <title>{finalTitle}</title>
+      <meta property="og:title" content={finalTitle} />
       <meta name="description" content={description} />
-    </Helmet>
+      <meta property="og:description" content={description} />
+      <meta name="twitter:card" content="summary_large_image" />
+    </Head>
   )
 }
 
 MetaDecorator.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-}
+};
 
-export default MetaDecorator
+export default MetaDecorator;

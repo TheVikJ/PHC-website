@@ -1,10 +1,9 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
 import Navbar from './Navbar'
 
 function Layout(props) {
   return (
-    <BrowserRouter>
+    <React.Fragment>
       <Navbar />
       <div
         style={{
@@ -14,7 +13,7 @@ function Layout(props) {
       >
         {props.children}
       </div>
-    </BrowserRouter>
+    </React.Fragment>
   )
 }
 
